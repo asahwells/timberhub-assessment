@@ -75,15 +75,6 @@ const Table: FC<TableProps> = ({ products }) => {
 													{dimension.thickness} x {dimension.width}
 												</p>
 											</div>
-											// <div
-											// 	key={index}
-											// 	className="flex flex-wrap flex-row bg-[#F4F4F6] rounded-lg py-2 items-baseline text-center"
-											// >
-											// 	<p className="mr-1">{index + 1}</p>
-											// 	<p>
-											// 		{dimension.thickness} x {dimension.width}
-											// 	</p>
-											// </div>
 										))}
 										{produce.dimensions.length > 3 && (
 											<div className="py-[4px] bg-[#F4F4F6] px-1 flex flex-row rounded-md mb-2 mr-1 font-light text-xs">

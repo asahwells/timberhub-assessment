@@ -11,7 +11,7 @@ import Search from "./svg/search.svg";
 // import Drawer from "./layout/Drawer";
 import dynamic from "next/dynamic";
 import Table from "./layout/Table";
-import NewDrawer from "./NewDrawer";
+import Drawer from "./Drawer";
 import { UseProduct } from "./Context";
 
 export interface ProductProps {
@@ -87,7 +87,7 @@ const HomePage = () => {
 						</div>
 						{/* <Drawer /> */}
 					</div>
-					<NewDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
+					<Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
 					<div className="relative mb-6">
 						<div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 							<Search />

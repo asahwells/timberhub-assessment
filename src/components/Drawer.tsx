@@ -21,7 +21,7 @@ const DEFAULT_INPUT_FIELD = {
 	width: "",
 	length: "",
 };
-const NewDrawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
+const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 	const { fetchData } = UseProduct();
 	interface IFormValue {
 		usage: { label: string; value: string };
@@ -72,7 +72,7 @@ const NewDrawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 				},
 				body: JSON.stringify({
 					id: Date.now(),
-					created: Date.now(),
+					created: "31. August 2022",
 					usage: data.usage.value,
 					species: data.species.value,
 					drying_method: data.drying.value,
@@ -346,7 +346,7 @@ const NewDrawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 
 								<div className="flex flex-row justify-between mb-9 ">
 									<button
-										type="submit"
+										type="button"
 										className=" text-black text-sm font-title font-bold uppercase"
 										onClick={() => setIsOpen(false)}
 									>
@@ -376,4 +376,4 @@ const NewDrawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 	);
 };
 
-export default NewDrawer;
+export default Drawer;
