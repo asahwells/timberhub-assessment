@@ -124,11 +124,11 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 			>
 				<section
 					className={
-						" w-screen max-w-lg right-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
+						" cell:w-full tablet:w-7/12 right-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
 						(isOpen ? " translate-x-0 " : " translate-x-full ")
 					}
 				>
-					<article className="relative w-screen max-w-lg flex flex-col space-y-6 overflow-y-scroll h-full p-4">
+					<article className="relative w-full flex flex-col space-y-6 overflow-y-scroll h-full p-4">
 						<div>
 							<p className="font-title text-[33px] text-black mt-[19px] mb-[9px]">
 								Create Product
@@ -202,7 +202,7 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 										<div className="flex flex-row items-center">
 											<Specifications />
 
-											<p className="font-title text-2xl ml-5"> Sawn Timber</p>
+											<p className="font-title text-2xl ml-5">Specifications</p>
 										</div>
 										<div className="mt-[13px] grid cell:grid-cols-2 tablet:grid-cols-3 gap-2 mb-[65px]">
 											<div className="text-sm font-body w-full">
@@ -273,14 +273,14 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 								</div>
 								{/* dimension */}
 								<div>
-									<div className="flex flex-row items-center justify-between">
+									<div className="flex flex-row items-center cell:justify-evenly cell:space-x-2 mdcell:justify-between ">
 										<div className="flex flex-row items-center">
 											<Dimension />
 
-											<p className="font-title text-2xl ml-5"> Sawn Timber</p>
+											<p className="font-title text-2xl ml-5"> Dimensions</p>
 										</div>
 										<div
-											className="text-[#20BE87]"
+											className="text-[#20BE87] font-title font-semibold text-sm flex text-center"
 											onClick={() =>
 												setDimensions((prev) => [
 													...prev,
@@ -313,7 +313,7 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 													<input
 														// name="thickness"
 														type="text"
-														className="mb-3 w-full"
+														className="mb-3 w-full border-[#D5D5D5] rounded"
 														value={val.thickness}
 														onChange={(e) => handleInput(e, index, "thickness")}
 													/>
@@ -324,7 +324,7 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 													<input
 														name="width"
 														type="text"
-														className="mb-3 w-full"
+														className="mb-3 w-full border-[#D5D5D5] rounded"
 														value={val.width}
 														onChange={(e) => handleInput(e, index, "width")}
 													/>
@@ -334,7 +334,7 @@ const Drawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 													<input
 														name="length"
 														type="text"
-														className="mb-3 w-full"
+														className="mb-3 w-full border-[#D5D5D5] rounded"
 														value={val.length}
 														onChange={(e) => handleInput(e, index, "length")}
 													/>

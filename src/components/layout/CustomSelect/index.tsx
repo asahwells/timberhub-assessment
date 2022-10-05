@@ -4,7 +4,7 @@ import Select, { Props } from "react-select";
 const CustomSelect = (props: Props) => {
 	return (
 		<Select
-			className="block appearance-none bg-accent border-none rounded-lg w-full outline-none focus:outline-none text-base text-body"
+			className="block appearance-none bg-accent border-none rounded-lg w-full outline-none focus:outline-none text-base"
 			isSearchable
 			{...props}
 			styles={{

@@ -79,7 +79,7 @@ const HomePage = () => {
 						</div>
 						<div>
 							<button
-								className="text-black font-title text-lg rounded-lg px-4 py-2 border-2 border-[#23D899] "
+								className="text-black font-title text-lg uppercase px-4 py-2 border-2 border-[#23D899] "
 								onClick={() => setIsOpen(true)}
 							>
 								+ Create Product

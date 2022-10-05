@@ -9,6 +9,7 @@ module.exports = {
 	theme: {
 		screens: {
 			cell: "320px",
+			mdcell: "375px",
 
 			tablet: "640px",
 			// => @media (min-width: 640px) { ... }

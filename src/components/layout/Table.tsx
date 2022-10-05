@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { ProductProps } from "../Home";
 import Wood from "../svg/wood.svg";
-import Divider from "./Divider";
+// import Divider from "./Divider";
 
 interface TableProps {
 	products: ProductProps[];
@@ -11,21 +11,22 @@ const Table: FC<TableProps> = ({ products }) => {
 	return (
 		<>
 			<div className="overflow-x-auto relative">
-				<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+				<table className="w-full text-sm text-left text-gray-500">
 					<thead className="">
 						<tr>
-							<th scope="col" className="py-3 px-6">
+							<th scope="col" className="py-1 px-6">
 								<div className="text-[#707786] flex tablet:flex-row cell:flex-col flex-col items-baseline mb-[13px]">
 									<p className="font-body text-xs font-light"> Product </p>
-									<p className="text-[8px] font-body font-light">
+									<p className="text-[8px] font-body font-light ml-[3px]">
 										(Species, Grade, Drying)
 									</p>
 								</div>
 							</th>
-							<th scope="col" className="py-3 px-6">
+							<th scope="col" className="py-1 px-6">
 								<div className="text-[#707786] flex tablet:flex-row cell:flex-col items-baseline text-center ">
-									<p className="font-body text-xs font-light"> Dimension </p>
-									<p className="text-[8px] font-body font-light">
+									<p className="font-body text-xs font-light">Dimensions</p>
+
+									<p className="text-[8px] font-body font-light ml-[3px]">
 										(Thicknessxwidth)
 									</p>
 								</div>
@@ -34,10 +35,10 @@ const Table: FC<TableProps> = ({ products }) => {
 					</thead>
 					{products?.map((produce) => (
 						<tbody key={produce?.id}>
-							<tr className="bg-white border-b ">
+							<tr className="bg-white border-b">
 								<th
 									scope="row"
-									className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+									className="pb-4 px-6 font-medium text-gray-900 whitespace-nowrap"
 								>
 									<div className="text-[#000000] flex flex-row items-center">
 										<div>
@@ -91,7 +92,7 @@ const Table: FC<TableProps> = ({ products }) => {
 				</table>
 			</div>
 
-			<Divider />
+			{/* <Divider /> */}
 		</>
 	);
 };
