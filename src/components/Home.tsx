@@ -73,13 +73,13 @@ const HomePage = () => {
 					</div>
 				</div>
 				<div className="px-[34px]">
-					<div className="flex pt-[19px] pb-[27px] justify-between items-center">
+					<div className="flex pt-[19px] flex-wrap pb-[27px] cell:justify-center tablet:justify-between items-center">
 						<div className="font-title text-4xl text-center mr-4">
 							All Products
 						</div>
 						<div>
 							<button
-								className="text-black font-title text-lg rounded-lg px-4 py-2 border-2 border-[#23D899]"
+								className="text-black font-title text-lg rounded-lg px-4 py-2 border-2 border-[#23D899] "
 								onClick={() => setIsOpen(true)}
 							>
 								+ Create Product

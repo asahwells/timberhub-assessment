@@ -61,20 +61,29 @@ const Table: FC<TableProps> = ({ products }) => {
 										</div>
 									</div>
 								</th>
-								<td className="py-4 px-6">
-									<div className="text-[#707786] flex flex-row items-baseline text-center flex-wrap">
+								<td className="py-4 px-4">
+									<div className="text-[#707786] flex tablet:flex-row cell:flex-col items-baseline text-center">
 										{produce?.dimensions.slice(0, 3).map((dimension, index) => (
 											<div
-												className="py-[4px] bg-[#F4F4F6] flex flex-row rounded-md mb-2 mr-1 font-light text-xs"
+												className="py-[4px] bg-[#F4F4F6] flex flex-row flex-wrap rounded-md mb-2 mr-1 font-light text-xs"
 												key={index}
 											>
-												<p className="mx-[6px] text-[#707786] opacity-30">
+												<p className="px-1 text-[#707786] opacity-30">
 													{index + 1}
 												</p>
-												<p className="text-[#1F2937] pr-[9px] ">
+												<p className="text-[#1F2937] pr-[9px]">
 													{dimension.thickness} x {dimension.width}
 												</p>
 											</div>
+											// <div
+											// 	key={index}
+											// 	className="flex flex-wrap flex-row bg-[#F4F4F6] rounded-lg py-2 items-baseline text-center"
+											// >
+											// 	<p className="mr-1">{index + 1}</p>
+											// 	<p>
+											// 		{dimension.thickness} x {dimension.width}
+											// 	</p>
+											// </div>
 										))}
 										{produce.dimensions.length > 3 && (
 											<div className="py-[4px] bg-[#F4F4F6] px-1 flex flex-row rounded-md mb-2 mr-1 font-light text-xs">
