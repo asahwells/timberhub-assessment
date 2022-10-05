@@ -14,9 +14,6 @@ import Table from "./layout/Table";
 import NewDrawer from "./NewDrawer";
 import { UseProduct } from "./Context";
 
-const Drawer = dynamic(() => import("./layout/Drawer"), {
-	ssr: false,
-});
 export interface ProductProps {
 	id: string;
 	created: string;
