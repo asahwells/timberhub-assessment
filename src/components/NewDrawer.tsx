@@ -55,7 +55,6 @@ const NewDrawer: FC<Iprops> = ({ isOpen, setIsOpen }) => {
 		//   return false;
 		// }
 	};
-	console.log(dimensions);
 	const {
 		control,
 		reset,

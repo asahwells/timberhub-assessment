@@ -41,7 +41,7 @@ export interface ProductContextTypes {
 	fetchData: () => void;
 }
 const HomePage = () => {
-	const { product, setProduct, fetchData } = UseProduct();
+	const { product, fetchData } = UseProduct();
 	const [isOpen, setIsOpen] = useState(false);
 	const [search, setSearch] = useState("");
 
@@ -55,8 +55,10 @@ const HomePage = () => {
 	}, []);
 	const filteredProduct = useMemo<ProductProps[]>(() => {
 		if (search) {
-			const newProduct = product?.filter((val) =>
-				val.usage.toLowerCase().includes(search.toLowerCase())
+			const newProduct = product?.filter(
+				(val) =>
+					val.species.toLowerCase().includes(search.toLowerCase()) ||
+					val.grade.toLowerCase().includes(search.toLowerCase())
 			);
 			return newProduct;
 		}
@@ -66,7 +68,9 @@ const HomePage = () => {
 		<main className="max-w-screen">
 			<div>
 				<div className="py-[10px] pl-[19px] shadow-lg">
-					<Timberhub />
+					<div className="w-[159px] h-[44px]">
+						<Timberhub />
+					</div>
 				</div>
 				<div className="px-[34px]">
 					<div className="flex pt-[19px] pb-[27px] justify-between items-center">
